@@ -10,7 +10,7 @@ MODEL = "google_genai:gemini-2.5-flash-lite"
 # MODEL = "groq:llama-3.3-70b-versatile"
 # MODEL = "openai:gpt-4o-mini"
 
-llm = init_chat_model(MODEL)
+llm = init_chat_model(MODEL, temperature=0.7)
 
 response = llm.invoke("What is LLM?")
 
