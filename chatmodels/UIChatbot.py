@@ -8,9 +8,9 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 load_dotenv()
 
 # ===================== CONFIG =====================
-st.set_page_config(page_title="AI Chatbot", page_icon="💬", layout="centered")
+st.set_page_config(page_title="AI Chatbot", page_icon="🎃", layout="centered")
 
-st.title("💬 Professional AI Assistant")
+st.title("👽 AI Assistant")
 st.caption("Powered by LangChain • Multi-Model Support")
 
 # Sidebar for configuration
