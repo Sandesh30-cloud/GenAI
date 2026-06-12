@@ -5,7 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 
 load_dotenv()
 
-model = ChatMistralAI(model="mistral-code-latest", temperature=0.7)
+model = ChatMistralAI(model="mistral-code-latest", temperature=0.4)
 data = TextLoader("/Users/sandesh04/Desktop/Projects/Gen AI/RAG/document-loaders/notes.txt")
 notes = data.load()
 
@@ -14,7 +14,7 @@ template = ChatPromptTemplate.from_messages([
     ("human","{notes}")
 ])
 
-prompt = template.format_prompt(notes=notes[0].page_content)
+prompt = template.format_prompt(notes=notes)
 
 results = model.invoke(prompt)
 print(results.content)
